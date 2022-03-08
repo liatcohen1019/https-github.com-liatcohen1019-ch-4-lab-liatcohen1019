@@ -13,12 +13,10 @@ def drawSineCurve(dart):
     y = math.sin(math.radians(i))
     dart.goto(i,y)
 
-
 def setupWindow(wn): 
   wn.setworldcoordinates(-360,-1,360,1)
-  wn.bgcolor("lightblue")
+  wn.bgcolor("pink")
 def setupAxis(dart):
-  dart.color("black")
   dart.goto(-360,0)
   dart.goto(360,0)
   dart.goto(0,0)
@@ -26,7 +24,7 @@ def setupAxis(dart):
   dart.goto(0,-1)
 
 def drawCosineCurve(dart):
-  dart.color("pink")
+  dart.color("lightblue")
   dart.goto(-360,0)
   dart.goto(-360,1)
   for i in range (-360,361):
@@ -59,21 +57,4 @@ def main():
     drawCosineCurve(dart)
     drawTangentCurve(dart)
     wn.exitonclick()
-main()
-
-  #Part A
-wn = turtle.Screen()
-wn.tracer(5)
-dart = turtle.Turtle()
-dart.speed(0)
-drawSineCurve(dart)
-
-    #Part B
-setupWindow(wn)
-setupAxis(dart)
-dart.speed(0)
-drawSineCurve(dart)
-drawCosineCurve(dart)
-drawTangentCurve(dart)
-wn.exitonclick()
 main()
